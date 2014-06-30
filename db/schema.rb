@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140627061647) do
+ActiveRecord::Schema.define(version: 20140630051618) do
+
+  create_table "chunks", force: true do |t|
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stories", force: true do |t|
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
